@@ -7,7 +7,7 @@ function App() {
   const [formData, setFormData]=React.useState({
     firstText:"",
     secondText:"",
-    imageURL:"http://i.imgflip.com/1bij.jpg"
+    imageURL:""
   });
   const [memeData, setMemeData]= React.useState([]);
   React.useEffect(()=>{
