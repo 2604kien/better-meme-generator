@@ -42,13 +42,14 @@
   }
 }
 .App-nav{
+  
   background-color: white;
   display: flex;
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 0.5%;
   padding-bottom: 0.5%;
-  
+  border-bottom: 3px solid #282c34;
   align-items: center;
 
 }
@@ -57,7 +58,17 @@
   
 }
 .App-nav >h2{
+  width: 80%;
   margin-left: 20px;
+  margin: 15px 0;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);  
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 1px;
+ 
   text-decoration: underline;
 }
 .memeForm{
@@ -68,7 +79,9 @@
   padding-right: 5%;
   padding-top: 2%;
   padding-bottom: 2%;
+
   border: 3px solid black;
+  border-top:none;
   border-radius: 7px;
   margin: auto;
   width: 60%;
@@ -81,6 +94,8 @@
 }
 .memeForm >button{
   width: 30%;
+  
+  font-family: impact, sans-serif;
   height: 50px;
   border-radius: 7px;
   cursor: pointer;
@@ -92,7 +107,6 @@
   display: flex;
   justify-content: center;
   margin-top: 2.5%;
-  border: 3px solid black;
   margin-bottom: 5%;
   max-width:100%;
   max-height: 60%;
@@ -120,7 +134,7 @@
       0 -2px 0 #000,
       -2px 0 0 #000,
       2px 2px 5px #000;
-  position: absolute;
+
   z-index: 9;
 }
 .SecondText{
@@ -146,7 +160,7 @@
       0 -2px 0 #000,
       -2px 0 0 #000,
       2px 2px 5px #000;
-  position: absolute;
+
   z-index: 9;
   margin-top: 270px;
 }
