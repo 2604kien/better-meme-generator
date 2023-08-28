@@ -15,10 +15,29 @@ function App() {
     .then(res=>res.json())
     .then(data=>setMemeData(data.data.memes));
   }, []);
+  console.log(memeData);
+  function handleChange(event){
+    const{name, type, value}=event.target;
+    setFormData((prev)=>{
+      return{
+        ...prev,
+        [name]: value
+      }
+    });
+  }
+  function getImage(){
+    let i=Math.floor(Math.random()*memeData.length);
+    setFormData((prev)=>{
+      return {
+        ...prev,
+        imageURL: memeData[i].url
+      }
+    });
+  }
   return (
     <div className="App">
       <Nav />
-      <Content imageURL={formData.imageURL}/>
+      <Content getImage={getImage} handleChange={handleChange} firstText={formData.firstText} secondText={formData.secondText} imageURL={formData.imageURL}/>
       </div>
   );
 }
