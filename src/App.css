@@ -1,5 +1,10 @@
 .App {
+
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
 }
 
 .App-logo {
@@ -35,4 +40,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+.App-nav{
+  background-color: white;
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  
+  align-items: center;
+
+}
+.App-nav-icon{
+  width: 8%;
+  
+}
+.App-nav >h2{
+  margin-left: 20px;
+  text-decoration: underline;
+}
+.memeForm{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  border: 3px solid black;
+  margin: auto;
+  width: 60%;
+}
+.memeForm >input{
+  width:30%;
+  margin: 5%;
+}
+.memeForm >button{
+  width: 30%;
 }

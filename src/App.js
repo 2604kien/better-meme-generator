@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
-
+import React from 'react';
+import Nav from "./Component/Nav";
+import Content from "./Component/Content";
+//api url=https://api.imgflip.com/get_memes
 function App() {
+  const [formData, setFormData]=React.useState({
+    firstText:"",
+    secondText:"",
+    imageURL:"http://i.imgflip.com/1bij.jpg"
+  });
+  const [memeData, setMemeData]= React.useState([]);
+  React.useEffect(()=>{
+    fetch("https://api.imgflip.com/get_memes")
+    .then(res=>res.json())
+    .then(data=>setMemeData(data.data.memes));
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Nav />
+      <Content imageURL={formData.imageURL}/>
+      </div>
   );
 }
 
