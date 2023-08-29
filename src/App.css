@@ -51,6 +51,7 @@
   padding-bottom: 0.5%;
   border-bottom: 3px solid #282c34;
   align-items: center;
+  
 
 }
 .App-nav-icon{
@@ -59,7 +60,6 @@
 }
 .App-nav >h2{
   width: 80%;
-  margin-left: 20px;
   margin: 15px 0;
   font-family: impact, sans-serif;
   font-size: 2em;
@@ -105,6 +105,7 @@
 }
 .imageSection{
   display: flex;
+  position: relative;
   justify-content: center;
   margin-top: 2.5%;
   margin-bottom: 5%;
@@ -113,9 +114,10 @@
 }
 .FirstText{
   position: absolute;
-  width: 80%;
+  width: 30%;
+  overflow-wrap: break-word;
   text-align: center;
-  left: 50%;
+
   transform: translateX(-50%);
   margin: 15px 0;
   padding: 0 5px;
@@ -136,12 +138,15 @@
       2px 2px 5px #000;
 
   z-index: 9;
+  cursor: move;
 }
 .SecondText{
   position: absolute;
-  width: 80%;
+  width: 30%;
+  overflow-wrap: break-word;
+
   text-align: center;
-  left: 50%;
+
   transform: translateX(-50%);
   margin: 15px 0;
   padding: 0 5px;
@@ -162,5 +167,5 @@
       2px 2px 5px #000;
 
   z-index: 9;
-  margin-top: 270px;
+  cursor: move;
 }
