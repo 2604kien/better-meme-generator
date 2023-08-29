@@ -1,4 +1,5 @@
 import React from "react";
+import Draggable from "react-draggable";
 
 export default function Content(props){
     return (
@@ -11,8 +12,26 @@ export default function Content(props){
 
         </div>
         <div className="imageSection">
+        <Draggable
+        axis="both"
+        handle=".FirstText"
+        bounds="parent"
+        defaultPosition={{x: 0, y: 0}}
+        position={null}
+        grid={[1, 1]}
+        scale={1}>
         <h3 className="FirstText" >{props.firstText}</h3>
+        </Draggable>  
+        <Draggable
+        axis="both"
+        handle=".SecondText"
+        bounds="parent"
+        defaultPosition={{x: 0, y: 270}}
+        position={null}
+        grid={[1, 1]}
+        scale={1}>  
         <h3 className="SecondText">{props.secondText}</h3>
+        </Draggable>  
         {props.imageURL && <img className="Content-Image" src={props.imageURL}/>}
   
         </div>
