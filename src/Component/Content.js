@@ -3,7 +3,7 @@ import Draggable from "react-draggable";
 
 export default function Content(props){
     return (
-    <div className="Content">
+    <div className="container-fluid border">
         <div className='memeForm'>
             <input type="text" onChange={props.handleChange} name="firstText" value={props.firstText} placeholder='Please enter the first line...'></input>
             <input type="text" onChange={props.handleChange} name="secondText" value={props.secondText} placeholder='Please enter the second line...'></input>
