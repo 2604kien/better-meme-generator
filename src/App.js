@@ -1,6 +1,8 @@
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import React from 'react';
 import Nav from "./Component/Nav";
+import "../node_modules/bootstrap/dist/css/bootstrap.css"
 import Content from "./Component/Content";
 //api url=https://api.imgflip.com/get_memes
 function App() {
