@@ -16,7 +16,7 @@ export default function Content(props){
             return prev;
         })
     }
-    const dragElement=Object.values(formData).map(el=>{
+    const dragElement=Object.values(formData).map(el=>{ 
         return <DragText key={el+Math.random()} text={el} textSize={textSize} position={positionArray[Object.values(formData).findIndex(a=>a===el)]} handlePositionDrag={handlePositionDrag} id={Object.values(formData).findIndex(a=>a===el)}/>
     })
     const handleChange=(e)=>{
@@ -30,7 +30,7 @@ export default function Content(props){
     }
     let inputElement=numberText.map(el=><input key={el} type="text" onChange={handleChange} name={`text${el}`} placeholder="Please enter something..." value={formData[`text${el}`]}/>)
     const handleAdd=()=>{
-       
+       if(numberText.length<9){
         setNumberText(prev=>{
             prev.push(prev[prev.length-1]+1);
             return prev;
@@ -45,7 +45,7 @@ export default function Content(props){
         setPositionArray(prev=>{
             return[...prev, {x:0, y:0}]
         })
-        
+        }
     }
     const handleFontSize=(e)=>{
         const {value}=e.target
@@ -78,8 +78,8 @@ export default function Content(props){
         
         <div className='memeForm'>
         <div style={{width:"100%", display:"flex", flexDirection:"column", justifyContent:"center", marginTop:"40px", alignItems:"center"}}>
-        <h4>Number of line (minimum is 2):</h4>
-        <div style={{display:"flex", flexDirection:"row", gap:"5px", justifyContent:"center", alignItems:"center", gap:"20px", width:"100%"}}>
+        <h4>Number of line (minimum is 2, maximum is 9):</h4>
+        <div style={{display:"flex", flexDirection:"row", gap:"5px", justifyContent:"center", alignItems:"center", width:"100%"}}>
             
                 <div onClick={handleMinus} style={{
                     backgroundColor:"transparent",
@@ -114,7 +114,7 @@ export default function Content(props){
         </div>
         <div className="imageSection">
         {dragElement}
-        {props.imageURL && <img className="Content-Image" src={props.imageURL}/>}
+        {props.imageURL && <img className="Content-Image" src={props.imageURL} alt="a generated meme"/>}
   
         </div>
     </div>
