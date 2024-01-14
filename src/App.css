@@ -9,7 +9,6 @@
 }
 
 
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -48,7 +47,6 @@
 }
 .App-nav-icon{
   width: 8%;
-  
 }
 .App-nav >h2{
   width: 80%;
@@ -67,7 +65,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 150px;
+  margin-top: 30px;
   align-items: center;
   border: 3px solid black;
   border-radius: 7px;
@@ -77,16 +75,24 @@
 .memeForm > input{
   height: 30px;
   width:50%;
-  margin: 3%;
-  border-radius: 7px;
+  margin:15px;
+  text-indent: 7px;
+  border: none;
+  font-size: 1.2rem;
+  border-bottom: 2px solid black;
+  outline: none;
 }
 .memeForm >button{
   width: 30%;
-  
+  background-color: transparent;
   font-family: impact, sans-serif;
   height: 50px;
-  border-radius: 7px;
+  font-size: 1.5rem;
   cursor: pointer;
+  transition: all 0.4s ease;
+}
+.memeForm >button:hover{
+  transform: scale(1.071);
 }
 .Content-Image{
   border-radius: 7px;
@@ -103,15 +109,11 @@
 }
 .FirstText{
   position: absolute;
-  width: 300px;
+  width: fit-content;
   overflow-wrap: break-word;
   text-align: center;
-
   transform: translateX(-50%);
-  margin: 15px 0;
-  padding: 0 5px;
   font-family: impact, sans-serif;
-  font-size: 2em;
   text-transform: uppercase;
   color: white;
   letter-spacing: 1px;
