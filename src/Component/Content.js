@@ -51,23 +51,22 @@ export default function Content(props){
         const {value}=e.target
         if(value>=1 && value<10) setTextSize(value)
     }
-    const handleMinus=()=>{
-        if(numberText.length>2){
-            setNumberText(prev=>{
-                prev.pop();
-                return prev;
-            })
-            setCurr(prev=>prev-1);
-            setFormData(prev=>{
-                delete prev[`text${numberText.length+1}`];
-                return prev;
-            })
-            setPositionArray(prev=>{
-                prev.pop()
-                return prev;
-            })
-        }
+const handleMinus = () => {
+    if (numberText.length > 2) {
+        setNumberText(prev => {
+            prev.pop();
+            return prev;
+        });
+        setCurr(prev => prev - 1);
+        setFormData(prev => {
+            delete prev[`text${numberText.length + 1}`];
+            return prev;
+        });
+        setPositionArray(prev => {
+            return prev.slice(0, -1);
+        });
     }
+};
     return (
     <div className="container-fluid border" style={{
         display:"flex",
