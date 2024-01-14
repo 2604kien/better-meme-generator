@@ -1,6 +1,6 @@
 import React from "react";
 import Draggable from "react-draggable";
-export default function DragText(){
+export default function DragText(props){
     return(
         <Draggable
         axis="both"
@@ -10,7 +10,7 @@ export default function DragText(){
         position={null}
         grid={[1, 1]}
         scale={1}>
-        <h3 className="FirstText" >{props.firstText}</h3>
+        <h3 className="FirstText" >{props.text}</h3>
         </Draggable>  
     )
 }

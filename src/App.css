@@ -76,7 +76,7 @@
 }
 .memeForm > input{
   height: 30px;
-  width:350px;
+  width:50%;
   margin: 3%;
   border-radius: 7px;
 }
@@ -103,37 +103,8 @@
 }
 .FirstText{
   position: absolute;
-  width: 30%;
+  width: 300px;
   overflow-wrap: break-word;
-  text-align: center;
-
-  transform: translateX(-50%);
-  margin: 15px 0;
-  padding: 0 5px;
-  font-family: impact, sans-serif;
-  font-size: 2em;
-  text-transform: uppercase;
-  color: white;
-  letter-spacing: 1px;
-  text-shadow:
-      2px 2px 0 #000,
-      -2px -2px 0 #000,
-      2px -2px 0 #000,
-      -2px 2px 0 #000,
-      0 2px 0 #000,
-      2px 0 0 #000,
-      0 -2px 0 #000,
-      -2px 0 0 #000,
-      2px 2px 5px #000;
-
-  z-index: 9;
-  cursor: move;
-}
-.SecondText{
-  position: absolute;
-  width: 30%;
-  overflow-wrap: break-word;
-
   text-align: center;
 
   transform: translateX(-50%);

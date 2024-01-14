@@ -1,16 +1,27 @@
 import React from "react";
-import Draggable from "react-draggable";
+import DragText from "./DragText";
 
 export default function Content(props){
     const [numberText, setNumberText]=React.useState([1,2]);
     const [curr, setCurr]=React.useState(0);
     const [formData, setFormData]=React.useState({
         text1: "",
-        text2:""
+        text2: ""
     })
-    const a=1
-    let inputElement=numberText.map(el=><input key={Math.random()*1000} type="text" onChange={props.handleChange} name={`text${el}`} placeholder="Please enter something..." value={formData[`text${el}`]}/>)
+    const dragElement=Object.values(formData).map(el=>{
+        return <DragText key={el} text={el}/>
+    })
+    const handleChange=(e)=>{
+        const {name, value}=e.target;
+        setFormData(prev=>{
+            return{
+                ...prev,
+                [name]:value
+            }
+        })
+    }
     console.log(formData);
+    let inputElement=numberText.map(el=><input key={el} type="text" onChange={handleChange} name={`text${el}`} placeholder="Please enter something..." value={formData[`text${el}`]}/>)
     const handleAdd=()=>{
        
         setNumberText(prev=>{
@@ -19,10 +30,10 @@ export default function Content(props){
         });
         setCurr(prev=>prev+1);
         setFormData(prev=>{
-            return [
+            return {
                 ...prev,
-                {[`text${prev.length+1}`]:""}
-            ]
+                [`text${numberText.length}`]:""
+            }
         })
         
     }
@@ -33,6 +44,10 @@ export default function Content(props){
                 return prev;
             })
             setCurr(prev=>prev-1);
+            setFormData(prev=>{
+                delete prev[`text${numberText.length+1}`];
+                return prev;
+            })
         }
     }
     return (
@@ -62,7 +77,7 @@ export default function Content(props){
 
         </div>
         <div className="imageSection">
-      
+        {dragElement}
         {props.imageURL && <img className="Content-Image" src={props.imageURL}/>}
   
         </div>
