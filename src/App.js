@@ -7,8 +7,6 @@ import Content from "./Component/Content";
 //api url=https://api.imgflip.com/get_memes
 function App() {
   const [formData, setFormData]=React.useState({
-    firstText:"",
-    secondText:"",
     imageURL:""
   });
   const [memeData, setMemeData]= React.useState([]);
@@ -17,7 +15,6 @@ function App() {
     .then(res=>res.json())
     .then(data=>setMemeData(data.data.memes));
   }, []);
-  console.log(memeData);
   function handleChange(event){
     const{name, type, value}=event.target;
     setFormData((prev)=>{
