@@ -17,7 +17,7 @@ function App() {
     .then(data=>setMemeData(data.data.memes));
   }, []);
   function handleChange(event){
-    const{name, type, value}=event.target;
+    const{name, value}=event.target;
     setFormData((prev)=>{
       return{
         ...prev,
