@@ -78,7 +78,7 @@ const handleMinus = () => {
         <div className='memeForm'>
         <div style={{width:"100%", display:"flex", flexDirection:"column", justifyContent:"center", marginTop:"40px", alignItems:"center"}}>
         <h4>Number of line (minimum is 2, maximum is 9):</h4>
-        <div style={{display:"flex", flexDirection:"row", gap:"5px", justifyContent:"center", alignItems:"center", width:"100%"}}>
+        <div style={{display:"flex", flexDirection:"row", gap:"65px", justifyContent:"center", alignItems:"center", width:"100%"}}>
             
                 <div onClick={handleMinus} style={{
                     backgroundColor:"transparent",
@@ -104,7 +104,7 @@ const handleMinus = () => {
                 alignItems:"center"
             }}>
                 <h4>Font Size (min value is 1 and max value is 9):</h4>
-                <input type="number" onChange={handleFontSize} value={textSize} style={{width:"fit-content", fontSize:"1.5rem", textAlign:"center"}}/>
+                <input type="number" onChange={handleFontSize} value={textSize} style={{width:"150px", fontSize:"1.5rem", textAlign:"center"}}/>
                 <h4>rem</h4>
             </div>
             {inputElement}

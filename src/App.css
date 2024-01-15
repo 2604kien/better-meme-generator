@@ -107,6 +107,9 @@
   max-width:100%;
   max-height: 60%;
 }
+.imageSection>img{
+  margin:100px;
+}
 .FirstText{
   position: absolute;
   width: fit-content;
