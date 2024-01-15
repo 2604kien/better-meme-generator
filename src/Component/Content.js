@@ -68,7 +68,7 @@ const handleMinus = () => {
     }
 };
     return (
-    <div className="container-fluid border" style={{
+    <div className="container-fluid" style={{
         display:"flex",
         flexDirection:"column",
         justifyContent:"center",

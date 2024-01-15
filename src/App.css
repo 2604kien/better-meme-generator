@@ -40,7 +40,7 @@
   padding-right: 10%;
   padding-top: 0.5%;
   padding-bottom: 0.5%;
-  border-bottom: 3px solid #282c34;
+  box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
   align-items: center;
   
 
@@ -68,7 +68,6 @@
   margin-top: 30px;
   align-items: center;
   border: 3px solid black;
-  border-radius: 7px;
   padding-bottom: 80px;
   width: 60%;
 }
@@ -109,6 +108,19 @@
 }
 .imageSection>img{
   margin:100px;
+}
+.footer{
+  width: 100%;
+  height: 200px;
+  margin-top: 5%;
+  box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Handlee', cursive;
+  font-size: 1.2rem;
+  background-color: white;
 }
 .FirstText{
   position: absolute;

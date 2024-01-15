@@ -4,6 +4,7 @@ import React from 'react';
 import Nav from "./Component/Nav";
 import "../node_modules/bootstrap/dist/css/bootstrap.css"
 import Content from "./Component/Content";
+import Footer from "./Component/Footer"
 //api url=https://api.imgflip.com/get_memes
 function App() {
   const [formData, setFormData]=React.useState({
@@ -37,6 +38,7 @@ function App() {
     <div className="App">
       <Nav />
       <Content getImage={getImage} handleChange={handleChange} firstText={formData.firstText} secondText={formData.secondText} imageURL={formData.imageURL}/>
+      <Footer/>
       </div>
   );
 }
